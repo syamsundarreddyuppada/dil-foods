@@ -8,35 +8,41 @@ import nav2 from "../../assets/nav2.svg";
 import nav3 from "../../assets/nav3.svg";
 import nav4 from "../../assets/nav4.svg";
 
+import styles from "./header.module.scss";
+import Link from "next/link";
+import { useSelector } from "react-redux";
+
 const HeaderNav = () => {
+  const { favoriteItems, cartItems } = useSelector(
+    (state) => state?.productItems
+  );
+
   return (
     <>
-      <div class="header">
+      <div className={styles.header}>
         <Image src={menu} />
-        <Image src={appLogo} class="logos" />
-        <div class="headerRight">
-          <Image src={nav4} class="Image1" />
-          <div class="fav">
-            <Image src={nav1} />
-            <span v-show="store?.favItems?.length">
-              {
-                // store?.favItems?.length
-                1
-              }
-            </span>
-          </div>
+        <Link href={"/"}>
+          {" "}
+          <Image src={appLogo} className={styles.logos} />
+        </Link>
+        <div className={styles.headerRight}>
+          <Image src={nav4} className={styles.Image1} />
+          <Link href={"/favorites"}>
+            {" "}
+            <div className={styles.fav}>
+              <Image src={nav1} />
+              {favoriteItems?.length ? <span>{favoriteItems?.length}</span> : ""}
+            </div>
+          </Link>
 
-          <div class="fav">
-            <Image src={nav2} />
-            <span v-show="store?.cartItems?.length">
-              {
-                // store?.cartItems?.length1
-                1
-              }
-            </span>
-          </div>
+          <Link href={"/checkout"}>
+            <div className={styles.fav}>
+              <Image src={nav2} />
+              {cartItems?.length ? <span>{cartItems?.length}</span> : ""}
+            </div>
+          </Link>
 
-          <Image src={nav3} class="Image1" />
+          <Image src={nav3} className={styles.Image1} />
         </div>
       </div>
     </>
