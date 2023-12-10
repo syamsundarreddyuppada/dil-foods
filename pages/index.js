@@ -32,13 +32,18 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <Image src={banner} className={styles.bannerImage} />
+      <Image
+        src={banner}
+        className={"w-full h-full object-contain cursor-pointer block"}
+      />
       <div className={`container ${styles.bannerList}`}>
         {bannerList.map((item, index) => (
           <BannerAvatar key={index} title={item?.title} image={item?.image} />
         ))}
       </div>
-      <div className={`container ${styles.WrapFlex}`}>
+      <div
+        className={`container flex justify-between flex-wrap gap-5 ${styles.WrapFlex}`}
+      >
         <div className={`${styles.Wrap} ${styles.wrapOne}`}>
           <Image
             src={bannerimg1}
@@ -89,7 +94,7 @@ export default function Home() {
       />
       <Image
         src={banner2}
-        className={[styles.bannerImage, styles.sizing].join(" ")}
+        className={"w-full h-full object-contain cursor-pointer block pt-16"}
         height={500}
       />
       <ProductsContainer
@@ -100,7 +105,9 @@ export default function Home() {
         titleDisplay="Best Selling Products"
         productsList={featureProductList}
       />
-      <div className={["container", styles.categoryWrap].join(" ")}>
+      <div
+        className={`container flex flex-wrap justify-between gap-5  ${styles.categoryWrap}`}
+      >
         {categoryList.map((item, index) => (
           <CategoryCard key={index} title={item.title} image={item.image} />
         ))}

@@ -10,38 +10,39 @@ import {
   addToCart,
   addToFavorite,
   assignCartData,
-  assignFavoriteData
+  assignFavoriteData,
 } from "@/store/productReducer/productReducer";
 
 const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
-  const { favoriteItems, cartItems } = useSelector(
+  const {  cartItems } = useSelector(
     (state) => state?.productItems
   );
   const dispatch = useDispatch();
 
   const [countSize, setCountSize] = useState(null);
+  const [counter, setCounter] = useState(1)
 
   const handleSize = (ind) => {
     setCountSize(ind);
   };
   const handleFavorite = (e) => {
-    dispatch(addToFavorite({...productItem,size:countSize}));
+    dispatch(addToFavorite({ ...productItem, size: countSize }));
   };
 
   const handleAddToCart = (e) => {
-    dispatch(addToCart({...productItem,size:countSize}));
+    dispatch(addToCart({ ...productItem, size: countSize }));
   };
-  
-  const handleDelete = () => { 
+
+  const handleDelete = () => {
     const modData = [...cartItems];
     modData.splice(unqId, 1);
-    dispatch(assignCartData(modData))
-   }
+    dispatch(assignCartData(modData));
+  };
 
-    useEffect(() => {
-    setCountSize(productItem?.size)
-    }, [])
-    
+  useEffect(() => {
+    setCountSize(productItem?.size);
+  }, []);
+
   return (
     <div
       className={[
@@ -84,6 +85,15 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
             </li>
           ))}
         </ul>
+        {isCheckout ? (
+          <div className={styles.counter}>
+            <button onClick={e => setCounter(counter - 1)} disabled={counter <= 1}>-</button>
+            <input type="text" value={counter} />
+            <button onClick={e => setCounter(counter + 1)}>+</button>
+          </div>
+        ) : (
+          ""
+        )}
 
         {isCheckout ? <button onClick={handleDelete}>Delete</button> : ""}
       </div>

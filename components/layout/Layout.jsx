@@ -1,18 +1,18 @@
 import React from 'react'
 import HeaderNav from '../header/HeaderNav'
 import Footer from '../footer/Footer'
-const Layout = ({children}) => {
+import { useRouter } from 'next/router'
+const Layout = ({ children }) => {
+  const router = useRouter()
   return (
       <div>
-          <header>
             <HeaderNav />
-          </header>
           <main>
             {children}
           </main>
-          <footer>
+          {router.pathname === "/" ? <footer>
             <Footer/>
-          </footer>
+          </footer> :""} 
     </div>
   )
 }

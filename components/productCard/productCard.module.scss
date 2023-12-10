@@ -31,6 +31,27 @@
   }
 }
 
+.counter{
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  button{
+    padding: 6px 25px !important;
+    margin: 0 !important;
+  }
+  input{
+    padding: 6px 2px;
+        border: 1px solid #e6e6e6;
+        outline: none;
+        max-width: 60px;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+
+  }
+}
+
 .active {
   background: #770015 !important;
   color: #ffffff !important;
@@ -47,7 +68,7 @@
     color: #1f1f1f;
     font-family: Montserrat;
     font-size: 18px;
-    font-style: normal;
+
     font-weight: 700;
     line-height: 18px;
     padding: 7px 0 10px;
@@ -55,7 +76,7 @@
       color: #f00;
       font-family: Montserrat;
       font-size: 10px;
-      font-style: normal;
+
       font-weight: 400;
       line-height: 18px; /* 180% */
       text-decoration: line-through;
@@ -74,42 +95,40 @@
     text-align: center;
     font-family: Montserrat;
     font-size: 14px;
-    font-style: normal;
+
     font-weight: 400;
-    line-height: normal;
+
     max-width: 147px;
     width: 100%;
     margin: 0 auto;
   }
   ul {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-}
-li {
-  width: 36px;
-  height: 36px;
-  color: #1c1c1c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  border: 1px solid #e6e6e6;
-  cursor: pointer;
-  &:hover {
-    background: rgb(242, 242, 242);
-    transition: 0.2s all ease-in-out;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+  li {
+    width: 36px;
+    height: 36px;
+    color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 14px;
+
+    font-weight: 500;
+
+    border: 1px solid #e6e6e6;
+    cursor: pointer;
+    &:hover {
+      background: rgb(242, 242, 242);
+      transition: 0.2s all ease-in-out;
+    }
   }
 }
-}
-
-
 
 .checkoutPage {
   display: flex;
@@ -138,8 +157,7 @@ li {
     color: #fff;
     font-family: Montserrat;
     font-size: 16px;
-    font-style: normal;
-    line-height: normal;
+
     text-transform: uppercase;
     border: none;
     cursor: pointer;

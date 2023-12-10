@@ -7,18 +7,6 @@
   flex-wrap: wrap;
 }
 
-.bannerImage {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  cursor: pointer;
-}
-
-.sizing {
-  padding-top: 68px;
-}
-
 .WrapFlex {
   display: flex;
   align-items: center;
@@ -87,8 +75,7 @@
     color: #fff;
     font-family: Montserrat;
     font-size: 16px;
-    font-style: normal;
-    line-height: normal;
+
     text-transform: uppercase;
     border: none;
     cursor: pointer;
@@ -102,29 +89,45 @@
 }
 
 .categoryWrap {
-    padding-top: 69px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+  padding-top: 69px;
 }
 
 .offerWrap {
-    padding-top: 69px;
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  padding-top: 69px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .subs {
-    padding-top: 69px;
+  padding-top: 69px;
 }
 
 .divider {
-    background: #e0dfde;
-    width: 100%;
-    height: 1px;
-    margin: 69px 0;
+  background: #e0dfde;
+  width: 100%;
+  height: 1px;
+  margin: 69px 0;
+}
+
+@media (max-width: 768px) {
+  .bannerList {
+    padding-top: 30px;
+  }
+  .productsList {
+    justify-content: center;
+    padding-top: 70px;
+  }
+  .categoryWrap {
+    justify-content: center;
+  }
+
+  .subs {
+    padding-top: 49px;
+  }
+  .divider {
+    margin: 49px 0;
+  }
 }

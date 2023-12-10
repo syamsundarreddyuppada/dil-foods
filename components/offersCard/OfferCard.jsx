@@ -4,7 +4,7 @@ import styles from "./offer.module.scss"
 
 const OfferCard = ({offer,image}) => {
   return (
-    <div className={styles.offer} style={ {background: styles }}>
+    <div className={["flex justify-center flex-col",styles.offer].join(" ")} style={ {background: styles }}>
         <Image src={image} alt="" />
         <span>Hurry Up!</span>
         <p>{ offer }</p>

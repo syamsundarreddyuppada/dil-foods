@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.container{
+html,
+body {
+  font-style: normal;
+}
+
+.container {
   max-width: 1240px;
   padding: 0 20px;
   margin: 0 auto;

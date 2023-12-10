@@ -10,7 +10,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <>
-      <div className={["container", styles.footer].join(" ")}>
+      <div className={["container flex flex-wrap gap-9", styles.footer].join(" ") }>
         <div className={styles.one}>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
