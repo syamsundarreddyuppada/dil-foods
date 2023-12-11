@@ -10,7 +10,10 @@ const index = () => {
   return (
     <div className="container">
         <TitleDisplay title="Favorite Products" />
-          <div className={styles.productsList}>
+      <div className={styles.productsList}>
+                <p className="flex justify-center w-full text-3xl">        No Favorite Items Available
+</p>
+
               {favoriteItems?.map((item,index)=>     <ProductCard
                 key={index}
                 productItem={item}

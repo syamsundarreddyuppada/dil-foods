@@ -18,6 +18,8 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
     (state) => state?.productItems
   );
   const dispatch = useDispatch();
+  const [cartIcon, setCartIcon] = useState(true);
+  const [favoIcon, setFavoIcon] = useState(true)
 
   const [countSize, setCountSize] = useState(null);
   const [counter, setCounter] = useState(1)
@@ -27,10 +29,12 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
   };
   const handleFavorite = (e) => {
     dispatch(addToFavorite({ ...productItem, size: countSize }));
+    setFavoIcon(false)
   };
 
   const handleAddToCart = (e) => {
-    dispatch(addToCart({ ...productItem, size: countSize }));
+    dispatch(addToCart({ ...productItem, size: countSize, quantity: 1 }));
+    setCartIcon(false)
   };
 
   const handleDelete = () => {
@@ -38,6 +42,21 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
     modData.splice(unqId, 1);
     dispatch(assignCartData(modData));
   };
+
+  const handleIncrement = () => { 
+    const cartMod = [...cartItems];
+    cartMod.splice(unqId,1,{...cartMod[unqId],quantity:counter + 1})
+    dispatch(assignCartData(cartMod));
+    setCounter(counter + 1)
+
+  }
+  
+  const handleDecrement = () => { 
+        const cartMod = [...cartItems];
+    cartMod.splice(unqId,1,{...cartMod[unqId],quantity:counter - 1})
+    dispatch(assignCartData(cartMod));
+    setCounter(counter - 1)
+   }
 
   useEffect(() => {
     setCountSize(productItem?.size);
@@ -60,8 +79,10 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
         />
         <div className={styles.hoverImg}>
           <Image src={img1} alt="" />
-          {!isFav ? <Image src={img2} alt="" onClick={handleFavorite} /> : ""}
-          {!isCheckout ? (
+
+          {(!isFav && favoIcon) ? <Image src={img2} alt="" onClick={handleFavorite} /> : ""}
+
+          {(!isCheckout && cartIcon) ? (
             <Image src={img3} alt="" onClick={handleAddToCart} />
           ) : (
             ""
@@ -87,9 +108,9 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
         </ul>
         {isCheckout ? (
           <div className={styles.counter}>
-            <button onClick={e => setCounter(counter - 1)} disabled={counter <= 1}>-</button>
+            <button onClick={handleDecrement} disabled={counter <= 1}>-</button>
             <input type="text" value={counter} />
-            <button onClick={e => setCounter(counter + 1)}>+</button>
+            <button onClick={handleIncrement}>+</button>
           </div>
         ) : (
           ""
