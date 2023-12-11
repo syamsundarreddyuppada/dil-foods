@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./checkout.module.scss";
 import TitleDisplay from "@/components/titleDisplay/TitleDisplay";
 import { useDispatch, useSelector } from "react-redux";

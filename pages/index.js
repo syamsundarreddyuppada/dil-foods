@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import banner from '../assets/banner.png';
 import banner2 from '../assets/banner2.png';
-import banner3 from '../assets/banner3.png';
 
 import bannerimg1 from '../assets/image2.png';
 import bannerimg2 from '../assets/image3.png';
@@ -15,8 +14,6 @@ import {
     featureProductList,
     trendingProductList,
 } from '@/data/products/products';
-import TitleDisplay from '@/components/titleDisplay/TitleDisplay';
-import ProductCard from '@/components/productCard/ProductCard';
 import ProductsContainer from '@/container/ProductsContainer/ProductsContainer';
 import { categoryList } from '@/data/category/category';
 import CategoryCard from '@/components/categoryCard/CategoryCard';
@@ -24,16 +21,17 @@ import OfferCard from '@/components/offersCard/OfferCard';
 import offer1 from '@/assets/diamond.png';
 import offer2 from '@/assets/discount.png';
 import Subscription from '@/components/subscription/Subscription';
-import Footer from '@/components/footer/Footer';
+import { Fragment } from 'react';
 
 export default function Home() {
     return (
-        <>
+        <Fragment>
             <Image
                 src={banner}
                 className={'w-full h-full object-contain cursor-pointer block'}
                 role="bannerMain"
                 alt="bannerMain"
+                priority
             />
             <div
                 className={`container flex justify-between gap-5 flex-wrap content-center md:pt-16 pt-7 ${styles.bannerList}`}
@@ -139,6 +137,6 @@ export default function Home() {
             </div>
 
             <div className={'w-full h-px bg-gray-300 !my-12 lg:!my-16'}></div>
-        </>
+        </Fragment>
     );
 }

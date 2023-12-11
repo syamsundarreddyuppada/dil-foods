@@ -3,8 +3,6 @@ import img2 from '@/assets/pro2.png';
 import img3 from '@/assets/pro3.png';
 import img4 from '@/assets/pro4.png';
 
-const featureProducts = ['a', 'b'];
-
 export const productSizes = ['S', 'M', 'L', 'XL', 'XXL'];
 
 export const trendingProductList = [

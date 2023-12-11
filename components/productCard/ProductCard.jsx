@@ -10,7 +10,6 @@ import {
     addToCart,
     addToFavorite,
     assignCartData,
-    assignFavoriteData,
 } from '@/store/productReducer/productReducer';
 
 const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
@@ -25,12 +24,12 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
     const handleSize = (ind) => {
         setCountSize(ind);
     };
-    const handleFavorite = (e) => {
+    const handleFavorite = () => {
         dispatch(addToFavorite({ ...productItem, size: countSize }));
         setFavoIcon(false);
     };
 
-    const handleAddToCart = (e) => {
+    const handleAddToCart = () => {
         dispatch(addToCart({ ...productItem, size: countSize, quantity: 1 }));
         setCartIcon(false);
     };
@@ -110,7 +109,7 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
                     {productSizes.map((item, index) => (
                         <li
                             key={index}
-                            onClick={(e) => handleSize(index)}
+                            onClick={() => handleSize(index)}
                             className={[
                                 index === countSize ? styles.active : '',
                             ].join(' ')}
