@@ -3,7 +3,7 @@ import styles from "./favorites.module.scss"
 import TitleDisplay from '@/components/titleDisplay/TitleDisplay'
 import { useSelector } from 'react-redux';
 import ProductCard from '@/components/productCard/ProductCard';
-const index = () => {
+const Favorite = () => {
       const { favoriteItems } = useSelector(
     (state) => state?.productItems
   );
@@ -11,8 +11,8 @@ const index = () => {
     <div className="container">
         <TitleDisplay title="Favorite Products" />
       <div className={styles.productsList}>
-                <p className="flex justify-center w-full text-3xl">        No Favorite Items Available
-</p>
+  {!favoriteItems?.length ?               <p className="flex justify-center w-full text-3xl">        No Favorite Items Available
+</p> :""}
 
               {favoriteItems?.map((item,index)=>     <ProductCard
                 key={index}
@@ -24,4 +24,4 @@ const index = () => {
     </div>  )
 }
 
-export default index
+export default Favorite

@@ -7,7 +7,7 @@ import ProductCard from "@/components/productCard/ProductCard";
 import { useRouter } from "next/router";
 import { assignCartData } from "@/store/productReducer/productReducer";
 
-const index = () => {
+const Checkout = () => {
   const router = useRouter();
   const dispatch = useDispatch()
   const { cartItems } = useSelector((state) => state?.productItems);
@@ -25,16 +25,13 @@ setCalculatePrice(result)
   }, [cartItems])
   
   
- 
-
-  console.log(cartItems);
-  return (
+   return (
     <div className={["container", styles.paySection].join(" ")}>
       <TitleDisplay title="Check Out" />
       <div className={styles.productsList}>
 
-        <p className="flex justify-center w-full text-3xl">        No Checkout Items Available
-</p>
+  {!cartItems?.length ?       <p className="flex justify-center w-full text-3xl">        No Checkout Items Available
+</p> :""}
 
         {cartItems?.map((item, index) => (
           <ProductCard
@@ -67,4 +64,4 @@ setCalculatePrice(result)
   );
 };
 
-export default index;
+export default Checkout;

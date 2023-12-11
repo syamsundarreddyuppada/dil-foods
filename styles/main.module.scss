@@ -1,18 +1,7 @@
-.bannerList {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding-top: 69px;
-  flex-wrap: wrap;
-}
+
 
 .WrapFlex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
+
   padding-top: 69px;
   img {
     cursor: pointer;
@@ -94,11 +83,6 @@
 
 .offerWrap {
   padding-top: 69px;
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .subs {

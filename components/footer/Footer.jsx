@@ -21,7 +21,7 @@ const Footer = () => {
           </p>
           <div className={styles.imgWrap}>
             {footerApps.map((item, index) => (
-              <Image src={item} alt="" key={index} />
+              <Image src={item} alt="social media" key={index} />
             ))}
           </div>
         </div>

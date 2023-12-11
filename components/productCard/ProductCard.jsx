@@ -72,18 +72,18 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
       <div className={styles.productImg}>
         <Image
           src={productItem?.image}
-          alt=""
+          alt="mainImg"
           width={283}
           height={412}
           className={styles.mainImg}
         />
-        <div className={styles.hoverImg}>
-          <Image src={img1} alt="" />
+        <div className={styles.hoverImg} role="hoverImg">
+          <Image src={img1} alt="" role="Share" />
 
-          {(!isFav && favoIcon) ? <Image src={img2} alt="" onClick={handleFavorite} /> : ""}
+          {(!isFav && favoIcon) ? <Image src={img2} alt="" onClick={handleFavorite} role="favIcon" /> : ""}
 
           {(!isCheckout && cartIcon) ? (
-            <Image src={img3} alt="" onClick={handleAddToCart} />
+            <Image src={img3} alt="" onClick={handleAddToCart} role="cartIcon" />
           ) : (
             ""
           )}
@@ -101,22 +101,23 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
               key={index}
               onClick={(e) => handleSize(index)}
               className={[index === countSize ? styles.active : ""].join(" ")}
+              role="sizes"
             >
               {item}
             </li>
           ))}
         </ul>
         {isCheckout ? (
-          <div className={styles.counter}>
-            <button onClick={handleDecrement} disabled={counter <= 1}>-</button>
-            <input type="text" value={counter} />
-            <button onClick={handleIncrement}>+</button>
+          <div className={styles.counter} role="counterWrap">
+            <button onClick={handleDecrement} role="decrement" disabled={counter <= 1}>-</button>
+            <input type="text" value={counter} role="inputCounter" readOnly />
+            <button onClick={handleIncrement} role="increment">+</button>
           </div>
         ) : (
           ""
         )}
 
-        {isCheckout ? <button onClick={handleDelete}>Delete</button> : ""}
+        {isCheckout ? <button onClick={handleDelete} role="deleteBtn">Delete</button> : ""}
       </div>
     </div>
   );

@@ -2,13 +2,13 @@ import Image from 'next/image'
 import React from 'react';
 import styles from "./offer.module.scss"
 
-const OfferCard = ({offer,image}) => {
+const OfferCard = ({offer,image,style}) => {
   return (
-    <div className={["flex justify-center flex-col",styles.offer].join(" ")} style={ {background: styles }}>
+    <div className={["flex justify-center flex-col",styles.offer].join(" ")} style={ {background: style }}>
         <Image src={image} alt="" />
         <span>Hurry Up!</span>
         <p>{ offer }</p>
-        <p class="sale">Sale</p>
+        <p className="sale">Sale</p>
         <button>shop now</button>
     </div>  )
 }
