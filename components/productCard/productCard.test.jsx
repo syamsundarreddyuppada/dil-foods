@@ -4,7 +4,6 @@ import ProductCard from './ProductCard';
 import img1 from '@/assets/pro1.png';
 import { Provider } from 'react-redux';
 import store from '@/store/store';
-import userEvent from '@testing-library/user-event';
 
 const productData = {
     title: 'Men Henley Neck Full Sleeve Red Wine',
@@ -12,7 +11,7 @@ const productData = {
     image: img1,
 };
 
-describe('Product Card ', () => {
+describe('ProductCard', () => {
     test('should contain product Card details', () => {
         render(
             <Provider store={store}>

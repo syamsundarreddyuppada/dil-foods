@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 
 import TitleDisplay from './TitleDisplay';
 
-describe('Title Display ', () => {
+describe('TitleDisplay', () => {
     test('should contain Title Display details', () => {
         render(<TitleDisplay title={'new products'} />);
 

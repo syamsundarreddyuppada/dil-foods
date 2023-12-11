@@ -3,7 +3,7 @@ import cat1 from '@/assets/Group50.png';
 import '@testing-library/jest-dom';
 import BannerAvatar from './BannerAvatar';
 
-describe('Banner Avatar ', () => {
+describe('BannerAvatar', () => {
     test('should contain Banner Avatar titles', () => {
         render(<BannerAvatar title={'shirts'} image={cat1} />);
         const element = screen.getByText('shirts');

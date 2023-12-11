@@ -1,5 +1,4 @@
 const { render, screen } = require('@testing-library/react');
-import cat1 from '@/assets/Group50.png';
 import '@testing-library/jest-dom';
 import HeaderNav from './HeaderNav';
 import configureMockStore from 'redux-mock-store';
@@ -21,7 +20,7 @@ const altTexts = [
     'user',
 ];
 
-describe('Header ', () => {
+describe('Header', () => {
     test('should contain Header items details', () => {
         const store = mockStore({
             productItems: {
@@ -37,7 +36,7 @@ describe('Header ', () => {
         );
 
         // Check each element with the expected alt text
-        altTexts.forEach((altText, index) => {
+        altTexts.forEach((altText) => {
             const element = screen.getByAltText(altText);
             expect(element).toBeInTheDocument();
         });

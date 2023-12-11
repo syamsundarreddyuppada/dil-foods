@@ -3,7 +3,7 @@ const { default: CategoryCard } = require('./CategoryCard');
 import cat1 from '@/assets/Group50.png';
 import '@testing-library/jest-dom';
 
-describe('category card ', () => {
+describe('categoryCard', () => {
     test('should contain category card titles', () => {
         render(<CategoryCard title={'New product'} image={cat1} />);
         const element = screen.getByText('New product');

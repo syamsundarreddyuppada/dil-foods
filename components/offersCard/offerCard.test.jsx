@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import OfferCard from './OfferCard';
 import offer1 from '@/assets/diamond.png';
 
-describe('Offer Card ', () => {
+describe('OfferCard', () => {
     test('should contain Offer Card details', () => {
         render(
             <OfferCard offer={'60% offer'} image={offer1} style="#CCCEA7" />

@@ -2,7 +2,7 @@ const { render, screen } = require('@testing-library/react');
 import '@testing-library/jest-dom';
 import Subscription from './Subscription';
 
-describe('Offer Card ', () => {
+describe('OfferCard', () => {
     test('should contain Offer Card details', () => {
         render(<Subscription />);
 
