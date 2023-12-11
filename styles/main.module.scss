@@ -1,117 +1,114 @@
-
-
 .WrapFlex {
-
-  padding-top: 69px;
-  img {
-    cursor: pointer;
-  }
-  .Wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-  }
-  .wrapOne {
+    padding-top: 69px;
     img {
-      width: 49%;
-      object-fit: contain;
-      height: 100%;
+        cursor: pointer;
     }
-  }
-  .wrapTwo {
-    img {
-      width: 32%;
-      height: 100%;
-    }
-  }
-  @media (max-width: 768px) {
     .Wrap {
-      flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
     }
     .wrapOne {
-      img {
-        width: 100%;
-        height: 100%;
-      }
+        img {
+            width: 49%;
+            object-fit: contain;
+            height: 100%;
+        }
     }
     .wrapTwo {
-      img {
-        width: 100%;
-        flex-basis: 100%;
-        height: 100%;
-      }
+        img {
+            width: 32%;
+            height: 100%;
+        }
     }
-  }
+    @media (max-width: 768px) {
+        .Wrap {
+            flex-wrap: wrap;
+        }
+        .wrapOne {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .wrapTwo {
+            img {
+                width: 100%;
+                flex-basis: 100%;
+                height: 100%;
+            }
+        }
+    }
 }
 
 .productsList {
-  padding-top: 49px;
-  display: flex;
-  gap: 48px 21px;
-  flex-wrap: wrap;
+    padding-top: 49px;
+    display: flex;
+    gap: 48px 21px;
+    flex-wrap: wrap;
 }
 
 .btn_Wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 49px;
-  .btn_all {
-    padding: 14px 45px;
-    background: #770015;
-    color: #fff;
-    font-family: Montserrat;
-    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 49px;
+    .btn_all {
+        padding: 14px 45px;
+        background: #770015;
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
 
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    &:hover {
-      background: #ffffff;
-      color: #770015;
-      outline: 1px solid #770015;
-      transition: 0.3s all ease-in-out;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background: #ffffff;
+            color: #770015;
+            outline: 1px solid #770015;
+            transition: 0.3s all ease-in-out;
+        }
     }
-  }
 }
 
 .categoryWrap {
-  padding-top: 69px;
+    padding-top: 69px;
 }
 
 .offerWrap {
-  padding-top: 69px;
+    padding-top: 69px;
 }
 
 .subs {
-  padding-top: 69px;
+    padding-top: 69px;
 }
 
 .divider {
-  background: #e0dfde;
-  width: 100%;
-  height: 1px;
-  margin: 69px 0;
+    background: #e0dfde;
+    width: 100%;
+    height: 1px;
+    margin: 69px 0;
 }
 
 @media (max-width: 768px) {
-  .bannerList {
-    padding-top: 30px;
-  }
-  .productsList {
-    justify-content: center;
-    padding-top: 70px;
-  }
-  .categoryWrap {
-    justify-content: center;
-  }
+    .bannerList {
+        padding-top: 30px;
+    }
+    .productsList {
+        justify-content: center;
+        padding-top: 70px;
+    }
+    .categoryWrap {
+        justify-content: center;
+    }
 
-  .subs {
-    padding-top: 49px;
-  }
-  .divider {
-    margin: 49px 0;
-  }
+    .subs {
+        padding-top: 49px;
+    }
+    .divider {
+        margin: 49px 0;
+    }
 }

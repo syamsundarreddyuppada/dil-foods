@@ -1,68 +1,68 @@
 .offer {
-  flex-basis: 49%;
-  flex-grow: 1;
-  padding: 55px 110px;
-  align-items: center;
-  background: #cccea7;
-  img {
-    width: 100%;
-    max-width: 150px;
-    height: 150px;
-    object-fit: contain;
-  }
-  span {
-    padding-top: 48px;
-    color: #1c1c1c;
-    text-align: center;
-    font-family: Playfair Display;
-    font-size: 36px;
-
-    font-weight: 600;
-  }
-  p {
-    padding-top: 22px;
-    color: #1c1c1c;
-    text-align: center;
-    font-family: Playfair Display;
-    font-size: 60px;
-
-    font-weight: 600;
-  }
-  .sale {
-    font-size: 36px;
-  }
-  button {
-    padding: 14px 36px;
-    border: 1px solid #fff;
-    color: #fff;
-    font-family: Montserrat;
-    font-size: 16px;
-
-    font-weight: 500;
-
-    text-transform: uppercase;
-    background: transparent;
-    margin-top: 22px;
-    cursor: pointer;
-    &:hover {
-      border: 1px solid #ffffff;
-      color: #1c1c1c;
-      background: #ffffff;
-      transition: 0.3s all ease-in-out;
+    flex-basis: 49%;
+    flex-grow: 1;
+    padding: 55px 110px;
+    align-items: center;
+    background: #cccea7;
+    img {
+        width: 100%;
+        max-width: 150px;
+        height: 150px;
+        object-fit: contain;
     }
-  }
+    span {
+        padding-top: 48px;
+        color: #1c1c1c;
+        text-align: center;
+        font-family: Playfair Display;
+        font-size: 36px;
+
+        font-weight: 600;
+    }
+    p {
+        padding-top: 22px;
+        color: #1c1c1c;
+        text-align: center;
+        font-family: Playfair Display;
+        font-size: 60px;
+
+        font-weight: 600;
+    }
+    .sale {
+        font-size: 36px;
+    }
+    button {
+        padding: 14px 36px;
+        border: 1px solid #fff;
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+
+        font-weight: 500;
+
+        text-transform: uppercase;
+        background: transparent;
+        margin-top: 22px;
+        cursor: pointer;
+        &:hover {
+            border: 1px solid #ffffff;
+            color: #1c1c1c;
+            background: #ffffff;
+            transition: 0.3s all ease-in-out;
+        }
+    }
 }
 @media (max-width: 768px) {
-  .offer {
-    width: 100%;
-    max-width: unset;
-    padding: 45px 30px;
-    p {
-      font-size: 50px;
+    .offer {
+        width: 100%;
+        max-width: unset;
+        padding: 45px 30px;
+        p {
+            font-size: 50px;
+        }
+        img {
+            max-width: 130px;
+            height: 130px;
+        }
     }
-    img {
-      max-width: 130px;
-      height: 130px;
-    }
-  }
 }

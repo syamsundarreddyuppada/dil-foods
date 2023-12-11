@@ -1,82 +1,82 @@
 .subWrap {
-  padding: 60px 20px;
-  background: linear-gradient(97deg, #ab001e -6.23%, #770015 105.09%);
-  position: relative;
-  p {
-    color: #fff;
-    text-align: center;
-    font-family: Playfair Display;
-    font-size: 36px;
-
-    font-weight: 600;
-
-    max-width: 694px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .action {
-    padding-top: 28px;
-    display: flex;
-    justify-content: center;
+    padding: 60px 20px;
+    background: linear-gradient(97deg, #ab001e -6.23%, #770015 105.09%);
     position: relative;
-    z-index: 1;
-
-    input {
-      padding: 24px 28px;
-      background: rgba(255, 255, 255, 0.32);
-      border: none;
-      max-width: 502px;
-      width: 100%;
-      color: #fff;
-      font-family: Montserrat;
-      font-size: 16px;
-
-      font-weight: 500;
-
-      &::placeholder {
+    p {
         color: #fff;
-        font-family: Montserrat;
-        font-size: 16px;
+        text-align: center;
+        font-family: Playfair Display;
+        font-size: 36px;
 
-        font-weight: 500;
-      }
-      &:focus-visible {
-        outline: none;
-      }
+        font-weight: 600;
+
+        max-width: 694px;
+        width: 100%;
+        margin: 0 auto;
     }
-    button {
-      background: #fff;
-      padding: 20px 28px;
-      color: #770015;
-      text-align: center;
-      font-family: "Playfair Display";
-      font-size: 22px;
+    .action {
+        padding-top: 28px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
 
-      font-weight: 600;
+        input {
+            padding: 24px 28px;
+            background: rgba(255, 255, 255, 0.32);
+            border: none;
+            max-width: 502px;
+            width: 100%;
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 16px;
 
-      border: none;
-      cursor: pointer;
+            font-weight: 500;
+
+            &::placeholder {
+                color: #fff;
+                font-family: Montserrat;
+                font-size: 16px;
+
+                font-weight: 500;
+            }
+            &:focus-visible {
+                outline: none;
+            }
+        }
+        button {
+            background: #fff;
+            padding: 20px 28px;
+            color: #770015;
+            text-align: center;
+            font-family: 'Playfair Display';
+            font-size: 22px;
+
+            font-weight: 600;
+
+            border: none;
+            cursor: pointer;
+        }
     }
-  }
 }
 
 @media (max-width: 600px) {
-  .subWrap {
-    overflow: hidden;
+    .subWrap {
+        overflow: hidden;
 
-    padding: 40px 20px;
+        padding: 40px 20px;
 
-    p {
-      font-size: 24px;
+        p {
+            font-size: 24px;
+        }
+        .action {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            input,
+            button {
+                padding: 12px 28px;
+            }
+        }
     }
-    .action {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      input,
-      button {
-        padding: 12px 28px;
-      }
-    }
-  }
 }

@@ -1,30 +1,30 @@
-import Image from 'next/image'
-import banner from '../assets/banner.png'
-import banner2 from '../assets/banner2.png'
-import banner3 from '../assets/banner3.png'
+import Image from 'next/image';
+import banner from '../assets/banner.png';
+import banner2 from '../assets/banner2.png';
+import banner3 from '../assets/banner3.png';
 
-import bannerimg1 from '../assets/image2.png'
-import bannerimg2 from '../assets/image3.png'
-import bannerimg3 from '../assets/image4.png'
-import bannerimg4 from '../assets/image5.png'
-import bannerimg5 from '../assets/image6.png'
-import { bannerList } from '@/data/banners/bannerAvatar'
-import BannerAvatar from '@/components/bannerAvatar/BannerAvatar'
-import styles from '@/styles/main.module.scss'
+import bannerimg1 from '../assets/image2.png';
+import bannerimg2 from '../assets/image3.png';
+import bannerimg3 from '../assets/image4.png';
+import bannerimg4 from '../assets/image5.png';
+import bannerimg5 from '../assets/image6.png';
+import { bannerList } from '@/data/banners/bannerAvatar';
+import BannerAvatar from '@/components/bannerAvatar/BannerAvatar';
+import styles from '@/styles/main.module.scss';
 import {
     featureProductList,
     trendingProductList,
-} from '@/data/products/products'
-import TitleDisplay from '@/components/titleDisplay/TitleDisplay'
-import ProductCard from '@/components/productCard/ProductCard'
-import ProductsContainer from '@/container/ProductsContainer/ProductsContainer'
-import { categoryList } from '@/data/category/category'
-import CategoryCard from '@/components/categoryCard/CategoryCard'
-import OfferCard from '@/components/offersCard/OfferCard'
-import offer1 from '@/assets/diamond.png'
-import offer2 from '@/assets/discount.png'
-import Subscription from '@/components/subscription/Subscription'
-import Footer from '@/components/footer/Footer'
+} from '@/data/products/products';
+import TitleDisplay from '@/components/titleDisplay/TitleDisplay';
+import ProductCard from '@/components/productCard/ProductCard';
+import ProductsContainer from '@/container/ProductsContainer/ProductsContainer';
+import { categoryList } from '@/data/category/category';
+import CategoryCard from '@/components/categoryCard/CategoryCard';
+import OfferCard from '@/components/offersCard/OfferCard';
+import offer1 from '@/assets/diamond.png';
+import offer2 from '@/assets/discount.png';
+import Subscription from '@/components/subscription/Subscription';
+import Footer from '@/components/footer/Footer';
 
 export default function Home() {
     return (
@@ -140,5 +140,5 @@ export default function Home() {
 
             <div className={'w-full h-px bg-gray-300 !my-12 lg:!my-16'}></div>
         </>
-    )
+    );
 }

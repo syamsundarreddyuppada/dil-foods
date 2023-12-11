@@ -1,9 +1,9 @@
-import React from 'react'
-import styles from './subscription.module.scss'
+import React from 'react';
+import styles from './subscription.module.scss';
 const Subscription = () => {
     const handleSubmit = (e) => {
-        e.preventDefault()
-    }
+        e.preventDefault();
+    };
     return (
         <div className={['container', styles.subWrap].join(' ')}>
             <p>Subscribe to get updates on exciting offers & deals</p>
@@ -19,7 +19,7 @@ const Subscription = () => {
                 </div>
             </form>
         </div>
-    )
-}
+    );
+};
 
-export default Subscription
+export default Subscription;

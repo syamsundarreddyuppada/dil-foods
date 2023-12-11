@@ -1,17 +1,17 @@
 .avatar {
-  p {
-    color: #1c1c1c;
-    font-family: Playfair Display;
-    font-size: 16px;
-  }
-
-  @media (max-width: 768px) {
-    img {
-      width: 120px;
-      height: 120px;
-    }
     p {
-      font-size: 14px;
+        color: #1c1c1c;
+        font-family: Playfair Display;
+        font-size: 16px;
     }
-  }
+
+    @media (max-width: 768px) {
+        img {
+            width: 120px;
+            height: 120px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
 }

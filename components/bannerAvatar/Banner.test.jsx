@@ -1,19 +1,18 @@
-const { render, screen } = require("@testing-library/react");
-import cat1 from "@/assets/Group50.png";
+const { render, screen } = require('@testing-library/react');
+import cat1 from '@/assets/Group50.png';
 import '@testing-library/jest-dom';
-import BannerAvatar from "./BannerAvatar";
+import BannerAvatar from './BannerAvatar';
 
-describe('Banner Avatar ', () => { 
-
-    test('should contain Banner Avatar titles', () => { 
-        render(<BannerAvatar title={"shirts"} image={cat1} />)
-        const element = screen.getByText("shirts");
+describe('Banner Avatar ', () => {
+    test('should contain Banner Avatar titles', () => {
+        render(<BannerAvatar title={'shirts'} image={cat1} />);
+        const element = screen.getByText('shirts');
         expect(element).toBeInTheDocument();
-    })
-    
-      test('should contain Banner Avatar  images', () => { 
-        render(<BannerAvatar title={"call"} image={cat1} />)
+    });
+
+    test('should contain Banner Avatar  images', () => {
+        render(<BannerAvatar title={'call'} image={cat1} />);
         const element = document.querySelector('img');
-          expect(element).toBeInTheDocument();
-     })
- })
+        expect(element).toBeInTheDocument();
+    });
+});

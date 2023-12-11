@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  font-style: normal;
+    font-style: normal;
 }
 
 .container {
-  max-width: 1240px;
-  padding: 0 20px;
-  margin: 0 auto;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
