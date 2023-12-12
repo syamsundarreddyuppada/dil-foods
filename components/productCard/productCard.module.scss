@@ -163,11 +163,19 @@
 }
 
 @media (max-width: 768px) {
+    .counter {
+        input {
+            padding: 4px 2px;
+        }
+    }
     .checkoutPage {
         flex-direction: column;
         .mainImg {
             height: 400px;
             object-fit: contain;
+        }
+        button {
+            font-size: 14px;
         }
     }
 }
