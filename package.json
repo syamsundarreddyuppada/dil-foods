@@ -6,7 +6,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "eslint . --fix",
+        "lint": "eslint --fix **/*.js **/*.jsx",
         "prepare": "husky install",
         "lint-staged": "prettier --write ./",
         "test": "jest",

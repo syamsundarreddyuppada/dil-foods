@@ -5,7 +5,7 @@ const createJestConfig = nextJest({
     dir: './',
     moduleNameMapper: {
         '\\.(png|jpg|webp|ttf|woff|woff2|svg|mp4)$':
-            '<rootDir>/path-to-fileMock.js',
+            '<rootDir>/path-to-fileMock.jsx',
     },
 });
 

@@ -13,13 +13,13 @@ import Link from 'next/link';
 import { useSelector } from 'react-redux';
 
 const HeaderNav = () => {
-    const { favoriteItems, cartItems } = useSelector(
-        (state) => state?.productItems
-    );
+    const { favoriteItems, cartItems } = useSelector((state) => state?.productItems);
 
     return (
         <>
-            <div className={`${styles.header}  flex justify-around py-2 px-5 `}>
+            <div
+                className={`${styles.header}  flex justify-around py-2 px-5 shadow-md bg-white `}
+            >
                 <Image src={menu} alt="menu" />
                 <Link href={'/'} role="homePage">
                     {' '}
@@ -51,9 +51,7 @@ const HeaderNav = () => {
                         <div className={styles.fav}>
                             <Image src={nav2} alt="Checkout Icon" />
                             {cartItems?.length ? (
-                                <span role="cartCount">
-                                    {cartItems?.length}
-                                </span>
+                                <span role="cartCount">{cartItems?.length}</span>
                             ) : (
                                 ''
                             )}

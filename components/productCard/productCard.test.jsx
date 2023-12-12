@@ -23,9 +23,7 @@ describe('ProductCard', () => {
                 />
             </Provider>
         );
-        const element = screen.getByText(
-            /Men Henley Neck Full Sleeve Red Wine/i
-        );
+        const element = screen.getByText(/Men Henley Neck Full Sleeve Red Wine/i);
         const price = screen.getByText(/399/i);
         const mainProductImg = screen.getByAltText('mainImg');
 

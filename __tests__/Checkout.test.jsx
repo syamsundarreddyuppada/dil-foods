@@ -3,7 +3,6 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import '@testing-library/jest-dom';
-import img1 from '@/assets/pro1.png';
 import Checkout from '@/pages/checkout';
 
 // Mock next/router

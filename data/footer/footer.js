@@ -10,11 +10,7 @@ export const footerApps = [app1, app2, app3, app4, app5];
 
 export const footerOnlineShopping = ['Men’s T-Shirts', 'Women’s Wear'];
 
-export const footerPolicy = [
-    ' About Us',
-    ' Terms & Conditions',
-    '  Contact Us',
-];
+export const footerPolicy = [' About Us', ' Terms & Conditions', '  Contact Us'];
 
 export const footerStore = [
     {

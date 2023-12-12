@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import banner from '../assets/banner.png';
+import banner from '../assets/chrismos.webp';
 import banner2 from '../assets/banner2.png';
 
 import bannerimg1 from '../assets/image2.png';
@@ -10,10 +10,7 @@ import bannerimg5 from '../assets/image6.png';
 import { bannerList } from '@/data/banners/bannerAvatar';
 import BannerAvatar from '@/components/bannerAvatar/BannerAvatar';
 import styles from '@/styles/main.module.scss';
-import {
-    featureProductList,
-    trendingProductList,
-} from '@/data/products/products';
+import { featureProductList, trendingProductList } from '@/data/products/products';
 import ProductsContainer from '@/container/ProductsContainer/ProductsContainer';
 import { categoryList } from '@/data/category/category';
 import CategoryCard from '@/components/categoryCard/CategoryCard';
@@ -22,10 +19,16 @@ import offer1 from '@/assets/diamond.png';
 import offer2 from '@/assets/discount.png';
 import Subscription from '@/components/subscription/Subscription';
 import { Fragment } from 'react';
+import SEO from '@/components/Seo/Seo';
 
 export default function Home() {
     return (
         <Fragment>
+            <SEO
+                title="Home"
+                description="Landing page of products"
+                keywords="products, offers, subscription"
+            />
             <Image
                 src={banner}
                 className={'w-full h-full object-contain cursor-pointer block'}
@@ -50,17 +53,17 @@ export default function Home() {
                 <div className={`${styles.Wrap} ${styles.wrapOne}`}>
                     <Image
                         src={bannerimg1}
-                        alt=""
-                        width="588"
-                        height="295"
-                        loading="lazy"
+                        alt="bannerimg1"
+                        width={588}
+                        height={295}
+                        priority
                     />
                     <Image
                         src={bannerimg2}
-                        alt=""
+                        alt="bannerimg2"
                         width="588"
                         height="295"
-                        loading="lazy"
+                        priority
                     />
                 </div>
                 <div className={`${styles.Wrap} ${styles.wrapTwo}`}>
@@ -68,22 +71,22 @@ export default function Home() {
                         src={bannerimg3}
                         width="384"
                         height="176"
-                        alt=""
-                        loading="lazy"
+                        alt="bannerimg3"
+                        priority
                     />
                     <Image
                         src={bannerimg4}
                         width="384"
                         height="176"
-                        alt=""
-                        loading="lazy"
+                        alt="bannerimg4"
+                        priority
                     />
                     <Image
                         src={bannerimg5}
                         width="384"
                         height="176"
-                        alt=""
-                        loading="lazy"
+                        alt="bannerimg5"
+                        priority
                     />
                 </div>
             </div>
@@ -97,9 +100,7 @@ export default function Home() {
             />
             <Image
                 src={banner2}
-                className={
-                    'w-full h-full object-contain cursor-pointer block pt-16'
-                }
+                className={'w-full h-full object-contain cursor-pointer block pt-16'}
                 height={500}
                 role="bannerSecondary"
                 alt="bannerSecondary"
@@ -131,11 +132,9 @@ export default function Home() {
                 <OfferCard image={offer1} offer="85% OFF" style="#CCCEA7" />
                 <OfferCard image={offer2} offer="75% OFF" style="#D6BEBE" />
             </div>
-
             <div className={'container !pt-12 lg:!pt-16'}>
                 <Subscription />
             </div>
-
             <div className={'w-full h-px bg-gray-300 !my-12 lg:!my-16'}></div>
         </Fragment>
     );

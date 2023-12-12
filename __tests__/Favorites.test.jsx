@@ -67,9 +67,7 @@ describe('Favorite Component', () => {
             </Provider>
         );
 
-        const product1 = screen.getByText(
-            'Men Henley Neck Full Sleeve Red Wine'
-        );
+        const product1 = screen.getByText('Men Henley Neck Full Sleeve Red Wine');
         const product2 = screen.getByText('Sleeve Red Wine');
 
         expect(product1).toBeInTheDocument();

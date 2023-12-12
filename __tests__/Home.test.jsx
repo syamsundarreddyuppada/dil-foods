@@ -4,7 +4,7 @@ import store from '@/store/store';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 
-describe('Home ', () => {
+describe('Home', () => {
     test('should contain Home details', () => {
         render(
             <Provider store={store}>

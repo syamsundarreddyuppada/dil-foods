@@ -5,6 +5,10 @@
     top: 0;
     z-index: 100;
 
+    .logos {
+        height: 70px;
+    }
+
     img {
         object-fit: contain;
         display: block;

@@ -5,9 +5,7 @@ import offer1 from '@/assets/diamond.png';
 
 describe('OfferCard', () => {
     test('should contain Offer Card details', () => {
-        render(
-            <OfferCard offer={'60% offer'} image={offer1} style="#CCCEA7" />
-        );
+        render(<OfferCard offer={'60% offer'} image={offer1} style="#CCCEA7" />);
 
         const element = screen.getByText('60% offer');
         const hurry = screen.getByText('Hurry Up!');

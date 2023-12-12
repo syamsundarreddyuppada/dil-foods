@@ -1,28 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Creation
 
-## Getting Started
+1. npx create-next-app@latest
+   On installation, you'll see the following prompts:
 
-First, run the development server:
+2. What is your project named? my-app
+   Would you like to use TypeScript? No / Yes
+   Would you like to use ESLint? No / Yes
+   Would you like to use Tailwind CSS? No / Yes
+   Would you like to use `src/` directory? No / Yes
+   Would you like to use App Router? (recommended) No / Yes
+   Would you like to customize the default import alias (@/_)? No / Yes
+   What import alias would you like configured? @/_
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3. Project created with basic files and folder(pages,public,styles,js.config.js,next.config.js,package-lock.js,package.json)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Folder Structure
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+    Dil-foods
+    │
+    │
+    └───assets (Directory to store all image files)
+    |
+    └───components (Parent directory for root)
+    │   └───resource folder (Resource folder for each specific component with CSS properties)
+                └───test files(resource.test.jsx) (Each specific resource file contains specific test cases for a component level)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+    data (Parent directory for constant data)
+    │   └───resource folder (Resource folder to store mock-data, data which can be used in components )
+    |
+    └───pages (Parent directory for react pages)
+    |   └───index.js (Router structure & default loading page)
+    |   └───resource folders (Each specific resource page folder)
+    |   └───api (Contains service files)
+    |   └───[subject] (Dynamic pages are specified in this folder)
+    |
+    └───styles (Directory to wrap all style dependencies of the application)
+    |       global.scss (Parent style sheet where application level common styles are mentioned)
+    |       └───styled components (Parent style sheet where application level styles are mentioned)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+    └───store (Directory to redux store files)
+            └───store.js (configure the store with reducers)
+            └───productReducer (Directory to Configured for products store)
+                └───productReducer.js (file to Configured for products reducer store)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    └───container (Directory to contain verious components in an arranged way like container)
+            └───ProductContainer (Directory to product container resource like title and productCard)
+                └───ProductContainer.jsx (Parent level where application level  entire product with titles are mentioned for reusability.)
+
+    └───__tests__ (Directory to contain pages test cases)
+            └───resource files (Each specific resource page file contains specific test cases for a page)
+
+## Running Project
+
+(for Development)
+
+1.  npm run dev (for development serve)
+
+(for production) 2. npm run build (Build files for production use) 3. npm run start (for production serve)
 
 ## Learn More
 

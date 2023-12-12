@@ -56,6 +56,7 @@ const ProductCard = ({ productItem, isCheckout, unqId, isFav }) => {
 
     useEffect(() => {
         setCountSize(productItem?.size);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
