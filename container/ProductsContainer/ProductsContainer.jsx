@@ -3,6 +3,7 @@ import TitleDisplay from '@/components/titleDisplay/TitleDisplay';
 import { trendingProductList } from '@/data/products/products';
 import React, { useState } from 'react';
 import styles from '@/styles/main.module.scss';
+import { categoryTitleObject } from '@/data/category/category';
 
 const ProductsContainer = ({
     titleDisplay = 'Trending T-Shirts',
@@ -10,7 +11,10 @@ const ProductsContainer = ({
 }) => {
     const [productDataList, setProductDataList] = useState(productsList);
     const handleViewAll = () => {
-        setProductDataList([...productDataList, ...productsList]);
+        const randomNumber = Math.floor(Math.random() * 6) + 1;
+        const categoryObject =
+            Object.values(categoryTitleObject)[parseInt(randomNumber, 10)];
+        setProductDataList([...productDataList, ...categoryObject.productsList]);
     };
     return (
         <div className="container">

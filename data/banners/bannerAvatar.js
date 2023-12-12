@@ -9,25 +9,31 @@ export const bannerList = [
     {
         title: 'Men’s T-Shirts',
         image: banner1,
+        route: '/category/MensT-Shirts',
     },
     {
         title: 'Women’s Wear',
         image: banner2,
+        route: '/category/WomensWear',
     },
     {
         title: 'Winter Collections',
         image: banner3,
+        route: '/category/WinterCollections',
     },
     {
         title: 'Hooded T-Shirts',
         image: banner4,
+        route: '/category/HoodedT-Shirts',
     },
     {
         title: 'Polo Neck T-Shirts',
         image: banner5,
+        route: '/category/PoloNeckT-Shirts',
     },
     {
         title: 'Full Sleeves T-Shirts',
         image: banner6,
+        route: '/category/FullSleevesT-Shirts',
     },
 ];

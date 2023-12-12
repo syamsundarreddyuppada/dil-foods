@@ -10,7 +10,12 @@ import bannerimg5 from '../assets/image6.png';
 import { bannerList } from '@/data/banners/bannerAvatar';
 import BannerAvatar from '@/components/bannerAvatar/BannerAvatar';
 import styles from '@/styles/main.module.scss';
-import { featureProductList, trendingProductList } from '@/data/products/products';
+import {
+    bestSellerProductList,
+    featureProductList,
+    newProductList,
+    trendingProductList,
+} from '@/data/products/products';
 import ProductsContainer from '@/container/ProductsContainer/ProductsContainer';
 import { categoryList } from '@/data/category/category';
 import CategoryCard from '@/components/categoryCard/CategoryCard';
@@ -20,6 +25,7 @@ import offer2 from '@/assets/discount.png';
 import Subscription from '@/components/subscription/Subscription';
 import { Fragment } from 'react';
 import SEO from '@/components/Seo/Seo';
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -29,65 +35,80 @@ export default function Home() {
                 description="Landing page of products"
                 keywords="products, offers, subscription"
             />
-            <Image
-                src={banner}
-                className={'w-full h-full object-contain cursor-pointer block'}
-                role="bannerMain"
-                alt="bannerMain"
-                priority
-            />
+            <Link href={'/category/Chrismas-Sale'}>
+                <Image
+                    src={banner}
+                    className={'w-full h-full object-contain cursor-pointer block'}
+                    role="bannerMain"
+                    alt="bannerMain"
+                    priority
+                />
+            </Link>
             <div
                 className={`container flex justify-between gap-5 flex-wrap content-center md:pt-16 pt-7 ${styles.bannerList}`}
             >
                 {bannerList.map((item, index) => (
-                    <BannerAvatar
-                        key={index}
-                        title={item?.title}
-                        image={item?.image}
-                    />
+                    <Link key={index} href={item.route}>
+                        {' '}
+                        <BannerAvatar title={item?.title} image={item?.image} />
+                    </Link>
                 ))}
             </div>
             <div
                 className={`container flex justify-center content-center flex-col flex-wrap gap-5 ${styles.WrapFlex}`}
             >
                 <div className={`${styles.Wrap} ${styles.wrapOne}`}>
-                    <Image
-                        src={bannerimg1}
-                        alt="bannerimg1"
-                        width={588}
-                        height={295}
-                        priority
-                    />
-                    <Image
-                        src={bannerimg2}
-                        alt="bannerimg2"
-                        width="588"
-                        height="295"
-                        priority
-                    />
+                    <Link href={'/category/HoodedT-Shirts'} className="contents">
+                        <Image
+                            src={bannerimg1}
+                            alt="bannerimg1"
+                            width={588}
+                            height={295}
+                            priority
+                        />
+                    </Link>
+                    <Link href={'/category/WinterCollections'} className="contents">
+                        {' '}
+                        <Image
+                            src={bannerimg2}
+                            alt="bannerimg2"
+                            width="588"
+                            height="295"
+                            priority
+                        />
+                    </Link>
                 </div>
                 <div className={`${styles.Wrap} ${styles.wrapTwo}`}>
-                    <Image
-                        src={bannerimg3}
-                        width="384"
-                        height="176"
-                        alt="bannerimg3"
-                        priority
-                    />
-                    <Image
-                        src={bannerimg4}
-                        width="384"
-                        height="176"
-                        alt="bannerimg4"
-                        priority
-                    />
-                    <Image
-                        src={bannerimg5}
-                        width="384"
-                        height="176"
-                        alt="bannerimg5"
-                        priority
-                    />
+                    <Link href={'/category/WomensWear'} className="contents">
+                        <Image
+                            src={bannerimg3}
+                            width="384"
+                            height="176"
+                            alt="bannerimg3"
+                            priority
+                        />
+                    </Link>
+                    <Link
+                        href={'/category/FullSleevesT-Shirts'}
+                        className="contents"
+                    >
+                        <Image
+                            src={bannerimg4}
+                            width="384"
+                            height="176"
+                            alt="bannerimg4"
+                            priority
+                        />
+                    </Link>
+                    <Link href={'/category/Chrismas-Sale'} className="contents">
+                        <Image
+                            src={bannerimg5}
+                            width="384"
+                            height="176"
+                            alt="bannerimg5"
+                            priority
+                        />
+                    </Link>
                 </div>
             </div>
             <ProductsContainer
@@ -98,30 +119,33 @@ export default function Home() {
                 titleDisplay="Featured Products"
                 productsList={featureProductList}
             />
-            <Image
-                src={banner2}
-                className={'w-full h-full object-contain cursor-pointer block pt-16'}
-                height={500}
-                role="bannerSecondary"
-                alt="bannerSecondary"
-            />
+            <Link href={'/category/Chrismas-Sale'}>
+                <Image
+                    src={banner2}
+                    className={
+                        'w-full h-full object-contain cursor-pointer block pt-16'
+                    }
+                    height={500}
+                    role="bannerSecondary"
+                    alt="bannerSecondary"
+                />
+            </Link>
             <ProductsContainer
                 titleDisplay="New Products"
-                productsList={featureProductList}
+                productsList={newProductList}
             />
             <ProductsContainer
                 titleDisplay="Best Selling Products"
-                productsList={featureProductList}
+                productsList={bestSellerProductList}
             />
             <div
                 className={`container flex flex-wrap justify-between gap-5  ${styles.categoryWrap}`}
             >
                 {categoryList.map((item, index) => (
-                    <CategoryCard
-                        key={index}
-                        title={item.title}
-                        image={item.image}
-                    />
+                    <Link href={item?.route} key={index}>
+                        {' '}
+                        <CategoryCard title={item.title} image={item.image} />
+                    </Link>
                 ))}
             </div>
             <div
